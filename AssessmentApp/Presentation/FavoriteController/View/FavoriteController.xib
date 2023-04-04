@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoriteController" customModule="AssessmentApp" customModuleProvider="target">
+            <connections>
+                <outlet property="priceLbl" destination="V6e-IH-7Dj" id="oaa-FQ-ilx"/>
+                <outlet property="tableView" destination="ERs-ZW-9XL" id="xxP-7p-7JI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView autoresizesSubviews="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ERs-ZW-9XL">
+                    <rect key="frame" x="0.0" y="120" width="393" height="637"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-iR-NPj">
+                    <rect key="frame" x="268" y="69" width="109" height="35"/>
+                    <color key="tintColor" systemColor="systemPinkColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Remove All"/>
+                    <connections>
+                        <action selector="emptyPressed:" destination="-1" eventType="touchUpInside" id="GSJ-Ru-Xm7"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-IH-7Dj">
+                    <rect key="frame" x="20" y="777" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="T2O-iR-NPj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="LYE-Va-2ek"/>
+                <constraint firstItem="V6e-IH-7Dj" firstAttribute="top" secondItem="ERs-ZW-9XL" secondAttribute="bottom" constant="20" id="MZF-vr-B6M"/>
+                <constraint firstItem="ERs-ZW-9XL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mwu-ni-rpf"/>
+                <constraint firstAttribute="trailing" secondItem="ERs-ZW-9XL" secondAttribute="trailing" id="NTD-c6-kyK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T2O-iR-NPj" secondAttribute="trailing" constant="16" id="ckA-QI-hjB"/>
+                <constraint firstItem="ERs-ZW-9XL" firstAttribute="top" secondItem="T2O-iR-NPj" secondAttribute="bottom" constant="16" id="pbS-2R-f7u"/>
+                <constraint firstItem="V6e-IH-7Dj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qX2-xd-8hR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="V6e-IH-7Dj" secondAttribute="bottom" constant="20" id="ts3-ou-bf7"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
