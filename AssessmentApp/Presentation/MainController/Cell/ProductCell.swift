@@ -38,7 +38,6 @@ class ProductCell: UITableViewCell {
     }
     
     private func setupUI(_ hiddenFavBtn: Bool? = nil, isFav: Bool) {
-        debugPrint(isFav)
         favButton.isHidden = isFav
         if let hiddenFavBtn {
             favButton.isHidden = hiddenFavBtn
@@ -47,7 +46,6 @@ class ProductCell: UITableViewCell {
     
     @IBAction private func favPressed(_ sender: UIButton) {
         favouritAction?()
-//        sender.setImage(UIImage(systemName: "star.fill"), for: .normal)
         isFavBtnHidden = true
         sender.isHidden = true
     }
