@@ -8,12 +8,6 @@
 import UIKit
 import Combine
 
-#warning("""
-The initial viewcontroller should show the shopping basket.
-It should contain a 'Plus' button for adding new items to the basket.
-It should contain a 'Clear' button for removing all items in the basket.
-""")
-
 class TableViewAdjustedHeight: UITableView {
     override var intrinsicContentSize: CGSize {
         self.layoutIfNeeded()
@@ -52,6 +46,11 @@ class MainController: UIViewController {
 
         setupUI()
         input.send(.viewDidLoad)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        input.send(.viewWillAppear)
     }
     
     //MARK: - Create -

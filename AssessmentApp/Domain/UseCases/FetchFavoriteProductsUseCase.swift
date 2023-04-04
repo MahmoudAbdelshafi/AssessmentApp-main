@@ -47,11 +47,8 @@ final class DefaultFetchFavoriteProductsUseCase: FetchFavoriteProductsUseCase {
     
     func getFavoriteProductsIDs() async -> [String] {
         do {
-            let products = try await execute()
+            let products =  await execute()
             return products?.products.map{$0.id} ?? []
-        } catch {
-            
         }
-       
     }
 }

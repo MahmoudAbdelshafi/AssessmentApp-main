@@ -43,6 +43,7 @@ final class ProductsScenesFlowCoordinator {
     
     private func presentfavoriteScreen() {
         let vc = dependencies.makeFavoriteController()
+        vc.modalPresentationStyle = .fullScreen
         productsVC?.present(vc, animated: true)
     }
 }

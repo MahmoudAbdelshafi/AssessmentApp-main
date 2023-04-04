@@ -23,6 +23,7 @@ protocol ProductsViewModelOutput {
 
 enum InPut {
     case viewDidLoad
+    case viewWillAppear
     case didSelectItem(index: Int)
     case saveAsFavorite(index: Int)
     case presentFavorites
@@ -66,6 +67,9 @@ final class DefaultMainViewModel: MainControllerViewModel {
                 
             case .presentFavorites:
                 presentFavorites()
+                
+            case .viewWillAppear:
+                viewWillAppear()
             }
         }.store(in: &cancellables)
         return output.eraseToAnyPublisher()
@@ -109,6 +113,8 @@ final class DefaultMainViewModel: MainControllerViewModel {
             for (index, porduct) in products.products.enumerated() {
                 if favoriteIDs.contains(porduct.id) {
                     self.products?.products[index].isFavorite = true
+                } else {
+                    self.products?.products[index].isFavorite = false
                 }
             }
             output.send(.dataLoaded)
@@ -124,6 +130,11 @@ extension DefaultMainViewModel {
     private func viewDidLoad() {
         Task {
             await fetchProducts()
+        }
+    }
+    
+    private func viewWillAppear() {
+        Task {
             await getFavIDs()
         }
     }

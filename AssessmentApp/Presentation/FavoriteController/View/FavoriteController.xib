@@ -40,14 +40,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-WA-5sm">
+                    <rect key="frame" x="16" y="75" width="83.333333333333329" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
+                    <connections>
+                        <action selector="dismissPressed:" destination="-1" eventType="touchUpInside" id="DUq-qU-FEc"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Ufm-WA-5sm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="2Sd-9I-0Z9"/>
                 <constraint firstItem="T2O-iR-NPj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="LYE-Va-2ek"/>
                 <constraint firstItem="V6e-IH-7Dj" firstAttribute="top" secondItem="ERs-ZW-9XL" secondAttribute="bottom" constant="20" id="MZF-vr-B6M"/>
                 <constraint firstItem="ERs-ZW-9XL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mwu-ni-rpf"/>
                 <constraint firstAttribute="trailing" secondItem="ERs-ZW-9XL" secondAttribute="trailing" id="NTD-c6-kyK"/>
+                <constraint firstItem="Ufm-WA-5sm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Vz7-DO-VzP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T2O-iR-NPj" secondAttribute="trailing" constant="16" id="ckA-QI-hjB"/>
                 <constraint firstItem="ERs-ZW-9XL" firstAttribute="top" secondItem="T2O-iR-NPj" secondAttribute="bottom" constant="16" id="pbS-2R-f7u"/>
                 <constraint firstItem="V6e-IH-7Dj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qX2-xd-8hR"/>

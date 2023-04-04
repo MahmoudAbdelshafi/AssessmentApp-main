@@ -48,6 +48,10 @@ class FavoriteController: UIViewController {
         input.send(.removeAllFavorites)
     }
     
+    @IBAction private func dismissPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     //MARK: - Private functions -
     
     private func setupUI() {

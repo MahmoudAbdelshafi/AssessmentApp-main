@@ -24,7 +24,6 @@ extension DefultProductsRepository: ProductsRepository {
             let requestProductsDTO: ProductsDTO = try await baseAPI.request(router: .getProducts)
             return requestProductsDTO.toProductsPageDomain()
         } catch {
-            debugPrint(error)
             throw error
         }
     }
