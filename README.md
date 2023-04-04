@@ -1,8 +1,8 @@
 # AssessmentApp
 
 ## Run Requirements 
- * IOS14
- * XCode Version 15.0
+ * IOS 15.0
+ * XCode Version 14.3
  
  ## OVERVIEW
   - AssessmentApp is a simple iOS App built using Clean Architecture and MVVM.
