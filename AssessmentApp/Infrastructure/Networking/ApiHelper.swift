@@ -10,6 +10,6 @@ import Foundation
 struct ApiHelper {
     
     /// API Base URL
-    static let baseURL = "https://run.mocky.io/"
+    static let baseURL = AppConfiguration().apiBaseURL
 }
 
